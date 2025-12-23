@@ -25,7 +25,15 @@ SECRET_KEY = 'django-insecure--=jn3b^(0v)j6=dij6z$y+p^7dfs%%8v$mluqxx-&1%l8i%rm5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.liutianyu.cloud','liutianyu.cloud','127.0.0.0']
+ALLOWED_HOSTS = [
+    'www.liutianyu.cloud',
+    'liutianyu.cloud',
+    '127.0.0.1',
+    '127.0.0.1:8000',
+    'localhost',
+    'localhost:8000',
+    'localhost:7777'
+]
 
 
 INSTALLED_APPS = [
