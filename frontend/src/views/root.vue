@@ -225,7 +225,7 @@ const switchView = (view: 'user' | 'menu') => {
 const fetchPswData = async () => {
   loading.value = true
   try {
-    const response = await axios.get('http://localhost:8000/api/psw-data/')
+    const response = await axios.get('api/psw-data/')
     pswData.value = response.data
   } catch (error) {
     console.error('获取PSW数据错误:', error)
@@ -239,7 +239,7 @@ const fetchPswData = async () => {
 const fetchMenuData = async () => {
   menuLoading.value = true
   try {
-    const response = await axios.get('http://localhost:8000/api/menu-data/')
+    const response = await axios.get('/api/menu-data/')
     menuData.value = response.data
   } catch (error) {
     console.error('获取菜单数据错误:', error)
@@ -262,7 +262,7 @@ const handleAddAccount = async () => {
 
   adding.value = true
   try {
-    const response = await axios.post('http://localhost:8000/api/add-psw-account/', {
+    const response = await axios.post('/api/add-psw-account/', {
       account: addForm.account,
       password: addForm.password
     })
@@ -320,7 +320,7 @@ const handleDeleteUser = async (id: number) => {
       type: 'warning'
     })
 
-    await axios.delete(`http://localhost:8000/api/delete-psw-account/${id}/`)
+    await axios.delete(`/api/delete-psw-account/${id}/`)
     ElMessage.success('删除成功')
     fetchPswData()
   } catch (error) {
@@ -340,7 +340,7 @@ const handleDeleteMenu = async (id: number) => {
       type: 'warning'
     })
 
-    await axios.delete(`http://localhost:8000/api/delete-menu/${id}/`)
+    await axios.delete(`/api/delete-menu/${id}/`)
     ElMessage.success('删除成功')
     fetchMenuData()
   } catch (error) {

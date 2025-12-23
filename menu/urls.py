@@ -6,7 +6,7 @@ from menu import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('add-delicious/', views.add_delicious, name='add_delicious'),
+    path('api/add-delicious/', views.add_delicious, name='add_delicious'),
     path('api/login/', views.login_api, name='login_api'),
     path('api/psw-data/', views.get_psw_data, name='get_psw_data'),
     path('api/add-psw-account/', views.add_psw_account, name='add_psw_account'),
