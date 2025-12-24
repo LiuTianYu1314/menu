@@ -4,7 +4,7 @@ import axios from 'axios'
 import { ElMessage, ElMessageBox } from 'element-plus'
 
 // 当前活动页面 - 默认显示添加页面 (home)
-const activePage = ref('home')
+const activePage = ref('menu')
 
 // 菜品数据
 const deliciousData = ref<any[]>([])
